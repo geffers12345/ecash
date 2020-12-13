@@ -1,0 +1,123 @@
+﻿@using registration.Controllers;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Add Money";
+}
+
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/pages/add-money/index.js"></script>
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 border-bottom-primary">
+            <h3 class="m-0 font-weight-bold text-primary">User Accounts</h3>
+        </div>
+        <div class="card-body">
+            <button data-toggle="modal" data-target="#modal" class="btn btn-primary btn-icon-split" id="add">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Add New Account</span>
+            </button>
+            <hr />
+            <div class="table-responsive">
+                <table id="tbl" class="table table-bordered" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Gender</td>
+                            <td>Email</td>
+                            <td>Contact</td>
+                            <td>Role</td>
+                            <td>Last Updated</td>
+                            <td>Status</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Account Information</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">First Name:</label>
+                        <input class="form-control" id="firstname" type="text" data-name="first name" placeholder="Ex. John" />
+                        <label id="error-firstname" class="text-danger" style="display:none"></label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Last Name:</label>
+                        <input class="form-control" id="lastname" type="text" data-name="last name" placeholder="Ex. Doe" />
+                        <label id="error-lastname" class="text-danger" style="display:none"></label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Middle Name:</label>
+                        <input class="form-control" id="middlename" type="text" placeholder="Ex. Doe" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Email Address:</label>
+                        <input class="form-control" id="email" type="text" data-name="email" placeholder="yourmail@email.com" />
+                        <label id="error-email" class="text-danger" style="display:none"></label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Password:</label>
+                        <input class="form-control" id="password" type="password" data-name="email" placeholder="Password" />
+                        <label id="error-password" class="text-danger" style="display:none"></label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Contact Number:</label>
+                        <input class="form-control" id="contact" type="text" data-name="contact" placeholder="ex. 0987654321" />
+                        <label id="error-contact" class="text-danger" style="display:none"></label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Gender:</label>
+                        <select class="form-control" id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Rather not say">Rather not say</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Role:</label>
+                        <select class="form-control" id="role"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" id="save">Save</button>
+                <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

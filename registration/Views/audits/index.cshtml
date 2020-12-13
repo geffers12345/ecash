@@ -1,0 +1,92 @@
+﻿@using registration.Controllers;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Audit Logs";
+}
+
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 border-bottom-primary">
+            <h3 class="m-0 font-weight-bold text-primary">Audit Logs</h3>
+        </div>
+        <div class="card-body">
+            <button data-toggle="modal" data-target="#modal" class="btn btn-primary btn-icon-split" id="add">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Add New Role</span>
+            </button>
+            <hr />
+            <div class="table-responsive">
+                <table id="tbl" class="table table-bordered" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Actions</td>
+                            <td>Date Created</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var permission = {
+        view: "@AuditsController.ModulePermissions.Contains(registration.Helpers.Ability.View).ToString()",
+        edit: "@AuditsController.ModulePermissions.Contains(registration.Helpers.Ability.Update).ToString()",
+        create: "@AuditsController.ModulePermissions.Contains(registration.Helpers.Ability.Create).ToString()",
+        remove: "@AuditsController.ModulePermissions.Contains(registration.Helpers.Ability.Delete).ToString()"
+    };
+
+    if (permission.view === "False") {
+        $('.container-fluid').empty()
+            .append('<div class="col-12"><h3 class="text-danger">You do not have the permission to view this page!</h3></div>');
+    }
+
+    $(document).ready(function () {
+
+        $('#tbody')
+            .empty()
+            .append('<tr class="loading"><td colspan="8"><center><img src="/content/img/overlay-loader.gif" height="100"/></center></td></tr>');
+
+        $.ajax({
+            type: 'POST',
+            url: '/Audits/get',
+            dataType: 'json',
+            data: { id: '' },
+            success: function (data) {
+                var items = data.map(item => {
+                    return new Promise(function (resolve, reject) {
+
+                        var html = "<tr>";
+
+                        html += "<td>" + item.Id + "</td>" +
+                            "<td>" + item.Action + "</td>" +
+                            "<td>" + item.DateCreated + "</td></tr>";
+
+                        $('#tbody').append(html);
+
+                        resolve();
+                    });
+                });
+
+                Promise.all(items).then(function () {
+                    $('.loading').remove();
+                    $('#tbl').DataTable();
+                });
+            },
+            error: function (ex) {
+                var r = jQuery.parseJSON(response.responseText);
+                console.log("Message: " + r.Message);
+                console.log("StackTrace: " + r.StackTrace);
+                console.log("ExceptionType: " + r.ExceptionType);
+            }
+        });
+
+    });
+</script>

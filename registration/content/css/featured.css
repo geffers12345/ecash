@@ -1,0 +1,35 @@
+﻿table#example.dataTable tbody tr.over {
+  background-image: url("https://cdn1.imggmi.com/uploads/2019/10/22/17652dbc0f7c0fc30eaff6c82416f264-full.png");
+}
+
+table#example.dataTable tbody tr.over > .sorting_1 {
+  background-image: url("https://cdn1.imggmi.com/uploads/2019/10/22/17652dbc0f7c0fc30eaff6c82416f264-full.png");
+}
+
+table#example2.dataTable tbody tr.over {
+  background-image: url("https://cdn1.imggmi.com/uploads/2019/10/22/17652dbc0f7c0fc30eaff6c82416f264-full.png");;
+}
+
+table#example2.dataTable tbody tr.over > .sorting_1 {
+  background-image: url("https://cdn1.imggmi.com/uploads/2019/10/22/17652dbc0f7c0fc30eaff6c82416f264-full.png");;
+}
+
+
+#description, #direction, #description-edit, #direction-edit, #desc-view,
+#direction-view, #contact, #contact-view, #contact-edit, #source, #source-edit {
+    /*width: 100%;
+    height: 250px;*/
+    min-height: 200px;
+    min-width: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.border-text {
+    /*width: 100%;
+    height: 250px;*/
+	 min-height: 250px;
+	 min-width: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}

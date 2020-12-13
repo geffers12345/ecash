@@ -1,0 +1,160 @@
+﻿/*BG for tagsinput*/
+
+.label-info {
+    background-color: #466bd9;
+    border-radius: .25em;
+    display: inline;
+    line-height: 1;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    color: #fff;
+}
+
+/*Style for category image (to center)*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Style for category icon*/
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Style for tables*/
+table th {
+    background: white !important;
+    border-bottom: 2px solid #403075 !important;
+}
+
+thead {
+    background-color: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 98%;
+    margin: 0% 0 3% 0;
+}
+
+table td, table th {
+    border: 1px solid #e6ecf5;
+    padding: 8px;
+    text-align: center !important;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+tbody tr:hover {background-color: #ddd;}
+
+table th, thead td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    text-align: left;
+    padding-right: 1px;
+    color: black;
+}
+
+/*Style for modals*/
+.modal-footer{
+    border-top: none !important;
+}
+
+.modal .col-md-1, .modal .col-md-2, .modal .col-md-3, .modal .col-md-4, .modal .col-md-5, .modal .col-md-6, .modal .col-md-12, .modal .col-md-9 {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+ 
+ 
+/*color style for modal distinction*/ 
+ 
+.modal-header2 {
+    background-color: #ADD8E6; 
+ }
+
+.modal-body2 {
+    background-color: #ADD8E6;
+ }
+ 
+
+
+.modal-footer2 {
+  background-color:#ADD8E6;
+  padding: 1rem;
+}
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+
+/*image*/
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+
+#cred {width:200px; white-space:nowrap; overflow:hidden;text-overflow:ellipsis !important}
+#cred span{display:inline-block;}
+
+#myMap {
+    width: 100%;
+    height: 300px;
+}
+
+
+#description, #direction, #description-edit, #direction-edit, #desc-view,
+#direction-view, #contact, #contact-view, #contact-edit, #expectation, #expectation-edit, #expectation-view, #source, #source-edit {
+    /*width: 100%;
+    height: 250px;*/
+    /*min-height: 200px;
+	 min-width: 100px;
+    border: 1px solid black;
+    overflow: hidden;*/
+    min-height: 200px;
+    min-width: 765px;
+    border: 1px solid black;
+    overflow: hidden;
+    display: inline-block !important;
+}
+
+.border-text {
+    /*width: 100%;
+    height: 250px;*/
+	 min-height: 250px;
+	 min-width: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}

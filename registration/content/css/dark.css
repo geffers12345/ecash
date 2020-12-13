@@ -1,0 +1,750 @@
+﻿.text-left h1 {
+    color: red;
+}
+
+.modal-footer{
+    border-top: none !important;
+}
+
+.modal .col-md-1, .modal .col-md-2, .modal .col-md-3, .modal .col-md-4, .modal .col-md-5, .modal .col-md-6, .modal .col-md-12, .modal .col-md-9 {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.tab-content .col-md-1,  .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-12, .col-md-8, .col-md-9 {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+@media (min-width: 768px) {
+    .modal-xl {
+        width: 90%;
+        max-width:1200px;
+    }
+}
+
+@media (min-width: 768px) {
+  .modal-xs {
+    width: 400px;
+   max-width:1200px;
+  }
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form-search .combobox-container,
+  .form-inline .combobox-container {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+  }
+  .form-search .combobox-container .input-group-addon,
+  .form-inline .combobox-container .input-group-addon {
+    width: auto;
+  }
+}
+
+.combobox-selected .caret {
+  display: none;
+}
+
+
+/* :not doesn't work in IE8 */
+
+.combobox-container:not(.combobox-selected) .glyphicon-remove {
+  display: none;
+}
+
+.typeahead-long {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.control-group.error .combobox-container .add-on {
+  color: #B94A48;
+  border-color: #B94A48;
+}
+
+.control-group.error .combobox-container .caret {
+  border-top-color: #B94A48;
+}
+
+.control-group.warning .combobox-container .add-on {
+  color: #C09853;
+  border-color: #C09853;
+}
+
+.control-group.warning .combobox-container .caret {
+  border-top-color: #C09853;
+}
+
+.control-group.success .combobox-container .add-on {
+  color: #468847;
+  border-color: #468847;
+}
+
+.control-group.success .combobox-container .caret {
+  border-top-color: #468847;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+.bg-sidebar-color {
+    background-color: cyan;
+}
+
+.p-sidebar {
+    padding-top: 10px;
+}
+
+.navbar-custom {
+    position: relative;
+    z-index: 1000;
+    min-height: 50px;
+    border: 1px solid transparent;
+}
+
+.profile-pic {
+    width: auto;
+    height: 20%;
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+#tbl td .img-responsive {
+    width : 100px;
+    height: 100px;
+}
+
+/*inline*/
+.form-group.col-md-4 {
+    display: flex;
+    align-items: center;
+}
+
+.modal-backdrop
+{
+    opacity: 0.8 !important;
+} 
+
+.btn-space {
+    margin-top: 10px;
+}
+
+
+/*.container {
+    width: 100px;
+}*/
+
+.container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*CSS for attendance page*/
+
+.center {
+  margin-top: 10%;
+  /*margin: auto;*/
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: center;
+}
+
+div.c {
+  font-size: 150%;
+}
+
+
+.text-left h1 {
+    color: red;
+}
+
+.modal-footer{
+    border-top: none !important;
+}
+
+.modal .col-md-1, .modal .col-md-2, .modal .col-md-3, .modal .col-md-4, .modal .col-md-5, .modal .col-md-6, .modal .col-md-12, .modal .col-md-9 {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.tab-content .col-md-1,  .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-12, .col-md-8 {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+@media (min-width: 768px) {
+    .modal-xl {
+        width: 90%;
+        max-width:1200px;
+    }
+}
+
+@media (min-width: 768px) {
+  .modal-xs {
+    width: 400px;
+   max-width:1200px;
+  }
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form-search .combobox-container,
+  .form-inline .combobox-container {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+  }
+  .form-search .combobox-container .input-group-addon,
+  .form-inline .combobox-container .input-group-addon {
+    width: auto;
+  }
+}
+
+.combobox-selected .caret {
+  display: none;
+}
+
+
+/* :not doesn't work in IE8 */
+
+.combobox-container:not(.combobox-selected) .glyphicon-remove {
+  display: none;
+}
+
+.typeahead-long {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.control-group.error .combobox-container .add-on {
+  color: #B94A48;
+  border-color: #B94A48;
+}
+
+.control-group.error .combobox-container .caret {
+  border-top-color: #B94A48;
+}
+
+.control-group.warning .combobox-container .add-on {
+  color: #C09853;
+  border-color: #C09853;
+}
+
+.control-group.warning .combobox-container .caret {
+  border-top-color: #C09853;
+}
+
+.control-group.success .combobox-container .add-on {
+  color: #468847;
+  border-color: #468847;
+}
+
+.control-group.success .combobox-container .caret {
+  border-top-color: #468847;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+.bg-sidebar-color {
+    background-color: cyan;
+}
+
+.p-sidebar {
+    padding-top: 10px;
+}
+
+.navbar-custom {
+    position: relative;
+    z-index: 1000;
+    min-height: 50px;
+    border: 1px solid transparent;
+}
+
+.profile-pic {
+    width: auto;
+    height: 20%;
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+#tbl td .img-responsive {
+    width : 100px;
+    height: 100px;
+}
+
+/*inline*/
+.form-group.col-md-4 {
+    display: flex;
+    align-items: center;
+}
+
+.modal-backdrop
+{
+    opacity: 0.8 !important;
+} 
+
+.btn-space {
+    margin-top: 10px;
+}
+
+
+/*.container {
+    width: 100px;
+}*/
+
+.container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*CSS for attendance page*/
+
+.center {
+  margin-top: 10%;
+  /*margin: auto;*/
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  padding: 10px;
+}
+
+div.c {
+  font-size: 150%;
+}
+
+
+/* The container */
+.container {
+  /*margin-top: 15%;
+  margin-bottom: 15%;*/
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 18px;
+    width: 18px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+table th {
+    background: white !important;
+    border-bottom: 2px solid #403075 !important;
+}
+
+thead {
+    background-color: none;
+}
+
+table {
+font-family: 'Century Gothic';
+border-collapse: collapse;
+width: 98%;
+margin: 0% 0 3% 0;
+}
+
+table td, table th {
+border: 1px solid #e6ecf5;
+padding: 8px;
+text-align: center !important;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+tbody tr:hover {background-color: #ddd;}
+
+table th, thead td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    text-align: left;
+    padding-right: 1px;
+    color: black;
+}
+
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.box-footer {
+    border-top: 1px solid #fff !important;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+    ul.pagination li a.active {
+        background-color: #403075;
+        color: white;
+    }
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+.paginate {
+    padding: 10px 0px 10px 0px;
+    float: right;
+}
+
+.box-body #search{
+    background-color: #fff !important;
+}
+
+.box-body #search-btn {
+    background-color: #403075;
+    color: white;
+    margin-left: 4%;
+}
+
+table .fa {
+    color: #4e4d4d  ;
+    font-size: 16px;
+    padding: 2px;
+}
+
+/*Button for dashboard*/
+
+.btn-space-2 {
+    margin-top: 20px;
+}
+
+/*for navbar*/
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #17252A;
+}
+
+/*For sidebar*/
+
+body {
+  font-family: "Lato", sans-serif;
+
+}
+
+.sidebar {
+  height: 100% !important;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url('bg/sidebar.png');
+  
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.centerclass{
+ /*background-color: #FF4136;
+  width: 300px;
+  height: 300px;
+  position: absolute;*/
+  left: 17%;
+  /*top: 1%;*/
+  /*transform: translate(-50%, -50%);*/
+}
+
+/* navbar */
+.navbar {
+    background-image: url('bg/background.png');
+    border-color: #E7E7E7;
+}
+
+/*Dashboard cards*/
+
+.main-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Where the magic happens */
+    grid-auto-rows: 94px;
+    grid-gap: 20px;
+    margin: 20px;
+}
+  
+.overviewcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d3d3;
+}
+
+/*For button on employee page*/
+#buttonStretch{
+    padding: 6px 71px;  
+}
+
+
+/*Style for map*/
+#myMap {
+    height: 600px;  
+}
+
+
+/*filemanager tables*/
+
+.td1 {
+    border: 1px solid #e6ecf5;
+    padding: 8px;
+    text-align: left!important;
+}
+
+ .th1 {
+    border: 1px solid #e6ecf5;
+    padding: 8px;
+    text-align: left!important;
+}
+
+
+ .centurygothic {
+  font-family: !important Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+}
+
+ bg-test  {
+  background-image: url("C:\Users\admin\Source\Repos\Recordzilla\EmployeeRecords\img\glyphicons-halflings.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+
+/*Style for file manager table*/
+
+div.filesTable {
+  border: 1px solid #405DA4;
+  background-color: #ECECEC;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.divTable.filesTable .divTableCell, .divTable.filesTable .divTableHead {
+  border: 0px solid #AAAAAA;
+  padding: 2px 3px;
+}
+.divTable.filesTable .divTableBody .divTableCell {
+  font-size: 15px;
+}
+.divTable.filesTable .divTableHeading {
+  background: #403075;
+  background: -moz-linear-gradient(top, #515b5f 0%, #2e3a3f 66%, #17252A 100%);
+  background: -webkit-linear-gradient(top, #515b5f 0%, #2e3a3f 66%, #17252A 100%);
+  background: linear-gradient(to bottom, #515b5f 0%, #2e3a3f 66%, #17252A 100%);
+  border-bottom: 1px solid #444444;
+}
+.divTable.filesTable .divTableHeading .divTableHead {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 0px solid #D0E4F5;
+}
+.divTable.filesTable .divTableHeading .divTableHead:first-child {
+  border-left: none;
+}
+
+.filesTable .tableFootStyle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #403075;
+}
+.filesTable .tableFootStyle {
+  font-size: 14px;
+}
+.filesTable .tableFootStyle .links {
+	 text-align: right;
+}
+.filesTable .tableFootStyle .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.filesTable.outerTableFooter {
+  border-top: none;
+}
+.filesTable.outerTableFooter .tableFootStyle {
+  padding: 3px 5px; 
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+

@@ -1,0 +1,218 @@
+﻿@using registration.Controllers;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Roles";
+}
+
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/pages/roles/index.js"></script>
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 border-bottom-primary">
+            <h3 class="m-0 font-weight-bold text-primary">User Roles</h3>
+        </div>
+        <div class="card-body">
+            <button data-toggle="modal" data-target="#modal" class="btn btn-primary btn-icon-split" id="add">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Add New Role</span>
+            </button>
+            <hr />
+            <div class="table-responsive">
+                <table id="tbl" class="table table-bordered" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Roles</td>
+                            <td>Description</td>
+                            <td>Date Created</td>
+                            <td>Date Updated</td>
+                            <td>Status</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Role Information</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Role Name:</label>
+                        <input class="form-control" id="name" type="text" data-name="role name" placeholder="Ex. Administrator" />
+                        <label id="error-name" class="text-danger" style="display:none"></label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Description:</label>
+                        <textarea class="form-control" id="description" type="text" placeholder="Type description here.."></textarea>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-primary">Permissions:</label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <tr>
+                                <td>Module Name</td>
+                                <td>View</td>
+                                <td>Create</td>
+                                <td>Modify</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr>
+                                <td>Dashboard</td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="4">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>User Accounts</td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="5">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="6">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="7">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="8">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>User Roles</td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="9">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="10">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="11">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="12">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Audit Logs</td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="13">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="14">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="15">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="containers">
+                                        <input type="checkbox" class="dashboard" value="16">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" id="save">Save</button>
+                <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var permission = {
+        view: "@RolesController.ModulePermissions.Contains(registration.Helpers.Ability.View).ToString()",
+        edit: "@RolesController.ModulePermissions.Contains(registration.Helpers.Ability.Update).ToString()",
+        create: "@RolesController.ModulePermissions.Contains(registration.Helpers.Ability.Create).ToString()",
+        remove: "@RolesController.ModulePermissions.Contains(registration.Helpers.Ability.Delete).ToString()"
+    };
+
+    if (permission.view === "False") {
+        $('.container-fluid').empty()
+            .append('<div class="col-12"><h3 class="text-danger">You do not have the permission to view this page!</h3></div>');
+    }
+
+    if (permission.create === "False") {
+        $('#add').remove();
+    }
+</script>

@@ -1,0 +1,62 @@
+﻿body {
+}
+
+
+/*Style for category image (to center)*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Style for category icon*/
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Style for tables*/
+table th {
+    background: white !important;
+    border-bottom: 2px solid #403075 !important;
+}
+
+thead {
+    background-color: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 98%;
+    margin: 0% 0 3% 0;
+}
+
+table td, table th {
+    border: 1px solid #e6ecf5;
+    padding: 8px;
+    text-align: center !important;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+tbody tr:hover {background-color: #ddd;}
+
+table th, thead td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    text-align: left;
+    padding-right: 1px;
+    color: black;
+}
+
+/*Style for modals*/
+.modal-footer{
+    border-top: none !important;
+}
+
+.modal .col-md-1, .modal .col-md-2, .modal .col-md-3, .modal .col-md-4, .modal .col-md-5, .modal .col-md-6, .modal .col-md-12, .modal .col-md-9 {
+    margin-bottom: 4%;
+    margin-top: 1%;
+}

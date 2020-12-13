@@ -1,0 +1,169 @@
+﻿@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TUP ECASH - 2020</title>
+
+    @*<link rel="icon" href="#" sizes="32x32">*@
+    <!-- Custom fonts for this template-->
+    <link href="~/content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="~/content/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="~/content/css/sweetalert2.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .bg-login-image {
+            background: none !important;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .mt-5, .my-5 {
+            margin-top: 7rem !important;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5" style="margin: 0px 200px;">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="text-gray-900 mb-4">TUP E-CASH</h1>
+                                        <p>Login Here</p>
+                                    </div>
+                                    <div class="user">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                                   id="email" placeholder="Email Adddress">
+                                            <label id="error-email" class="text-danger" style="display: none"></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" id="password" placeholder="Password" data-name="password">
+                                            <label id="error-password" class="text-danger" style="display: none"></label>
+                                        </div>
+                                        <button id="login" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
+                                    </div>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="#">Forgot Password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="~/content/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="~/scripts/sb-admin-2.min.js"></script>
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/helpers.js"></script>
+    <script src="~/scripts/validator.js"></script>
+    <script src="~/scripts/sweetalert2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var parentObj = {
+                init: function () {
+                    var self = this;
+
+                    self.declaration();
+                    self.setEvents();
+                },
+                declaration: function () {
+                    var self = this;
+
+                    self.$btn_login = $('#login');
+                },
+                setEvents: function () {
+                    var self = this;
+
+                    self.$btn_login.on("click", function (event) {
+                        event.preventDefault();
+
+                        if (self.validate()) {
+
+                            self.$btn_login.prop('disabled', true);
+
+                            var items = {};
+
+                            items.email = $("#email").val();
+                            items.password = $("#password").val();
+
+                            self.login(items);
+
+                        }
+                    });
+                },
+                login: function (items) {
+                    var self = this;
+
+                    $.ajax({
+                        type: "POST",
+                        url: '/Accounts/login',
+                        data: '{items: ' + JSON.stringify(items) + '}',
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            if (data != 0) {
+                                setTimeout(function () {
+                                    $(window.location).attr('href', '/dashboard');
+                                }, 3000);
+                            } else {
+                                swal('Oops!', 'Invalid Credentials', 'error');
+                            }
+
+                            self.$btn_login.prop('disabled', false);
+                        },
+                        error: function () {
+                            console.log("Error while inserting data");
+                        }
+                    });
+                },
+                validate: function () {
+                    var a = $("#email").validate(['email']).displayErrorOn($("#error-email"));
+                    var b = $("#password").validate(['required']).displayErrorOn($("#error-password"));
+
+                    return a && b;
+                }
+            };
+
+            var InitializeParentObj = function () {
+                var parentTaskObj = Object.create(parentObj);
+                parentTaskObj.init();
+            };
+
+            InitializeParentObj();
+        });
+    </script>
+</body>
+</html>
